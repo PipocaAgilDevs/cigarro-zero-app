@@ -12,11 +12,12 @@ export default {
       backgroundColor: "#ffffff",
     },
     androidStatusBar: {
-      barStyle: "light-content",
-      backgroundColor: "#000000",
+      barStyle: "dark-content",
+      backgroundColor: "#ffffff",
     },
     androidNavigationBar: {
       barStyle: "light-content",
+      backgroundColor: "#ffffff",
     },
     updates: {
       fallbackToCacheTimeout: 0,
