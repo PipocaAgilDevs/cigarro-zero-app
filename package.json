@@ -5,7 +5,7 @@
     "@react-navigation/native": "^6.1.17",
     "@react-navigation/stack": "^6.4.0",
     "@reduxjs/toolkit": "^2.2.6",
-    "expo": "~51.0.21",
+    "expo": "~51.0.24",
     "expo-app-loading": "^2.1.1",
     "expo-font": "~12.0.9",
     "react": "18.2.0",
@@ -31,5 +31,5 @@
   },
   "version": "1.0.0",
   "private": true,
-  "name": "mercadinho-do-ze"
+  "name": "cigarrozeroapp"
 }
