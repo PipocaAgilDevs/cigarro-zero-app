@@ -1,1 +1,0 @@
-# cigarro-zero-app
