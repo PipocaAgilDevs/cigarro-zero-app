@@ -167,7 +167,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 150,
+                        height: 160,
                         width: screenSize.width,
                         child: ListView.builder(
                           itemCount: 6,
@@ -248,7 +248,7 @@ class AchievementCard extends StatelessWidget {
         color: theme.cardTheme.color,
         child: Container(
           width: 141.73,
-          height: 160.03,
+          height: 160,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(13.84),
             color: theme.cardTheme.color,
@@ -260,7 +260,7 @@ class AchievementCard extends StatelessWidget {
             ],
           ),
           child: Padding(
-            padding: const EdgeInsets.all(8),
+            padding: const EdgeInsets.all(8.8),
             child: SizedBox(
               width: 124,
               height: 130,
@@ -268,7 +268,7 @@ class AchievementCard extends StatelessWidget {
                 children: [
                   Container(
                     width: 124,
-                    height: 70,
+                    height: 71,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(11),
                       border: Border.all(
@@ -289,7 +289,7 @@ class AchievementCard extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 4),
+                  const SizedBox(height: 4.4),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -298,7 +298,7 @@ class AchievementCard extends StatelessWidget {
                         style: theme.textTheme.bodySmall!.copyWith(
                           fontWeight: FontWeight.w700,
                           color: AppColors.primary400,
-                          height: 1.2,
+                          height: 1.3,
                           fontSize: 9.9,
                         ),
                       ),
@@ -309,12 +309,12 @@ class AchievementCard extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 4),
+                  const SizedBox(height: 4.4),
                   Text(
                     "Sua pressão arterial e frequência cardíaca diminuem",
                     style: theme.textTheme.bodySmall!.copyWith(
                       color: AppColors.primary500,
-                      height: 1.15,
+                      height: 1.2,
                       fontSize: 8.86,
                       fontWeight: FontWeight.w400,
                     ),
