@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ContainerSection extends StatelessWidget {
-  final IconData icon;
+  final String icon;
   final String value;
   final String description;
 
@@ -18,9 +18,10 @@ class ContainerSection extends StatelessWidget {
       children: [
         Row(
           children: [
-            Icon(
-              icon,
-              size: 22,
+            Image.asset(
+              'assets/images/$icon.png',
+              width: 22,
+              height: 22,
               color: const Color(0xFF003D83),
             ),
             const SizedBox(width: 8),
