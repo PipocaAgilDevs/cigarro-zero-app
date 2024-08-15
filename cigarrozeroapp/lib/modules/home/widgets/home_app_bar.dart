@@ -19,22 +19,27 @@ class HomeAppBar extends StatelessWidget {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    const Text(
+                    Text(
                       "Cigarro Zero",
-                      style: TextStyle(
-                          color: Color(0xFF001C3E),
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                          fontFamily: 'Oswald'),
+                      style: GoogleFonts.oswald(
+                        color: Color(0xFF001C3E),
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        height: 22.4 / 16,
+                        letterSpacing: -0.011,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
                     const SizedBox(height: 2),
                     Text(
                       "Meu Progresso",
                       style: TextStyle(
                         color: Color(0xFF475467),
-                        fontWeight: FontWeight.w400,
                         fontSize: 12,
+                        fontWeight: FontWeight.w400,
+                        height: 18 / 12,
                       ),
+                      textAlign: TextAlign.center,
                     ),
                   ],
                 ),
