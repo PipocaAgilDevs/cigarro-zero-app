@@ -22,18 +22,18 @@ class HomeAppBar extends StatelessWidget {
                     const Text(
                       "Cigarro Zero",
                       style: TextStyle(
-                        color: Color(0xFF101828),
-                        fontSize: 17,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: 'Oswald',
-                      ),
+                          color: Color(0xFF001C3E),
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          fontFamily: 'Oswald'),
                     ),
                     const SizedBox(height: 2),
                     Text(
                       "Meu Progresso",
                       style: TextStyle(
-                        color: Color(0xFF475467).withOpacity(0.6),
-                        fontSize: 14,
+                        color: Color(0xFF475467),
+                        fontWeight: FontWeight.w400,
+                        fontSize: 12,
                       ),
                     ),
                   ],
