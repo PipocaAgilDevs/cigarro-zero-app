@@ -1,3 +1,4 @@
+import 'package:cigarrozeroapp/modules/home/widgets/navbar.dart';
 import 'package:flutter/material.dart';
 
 import '../../app_colors.dart';
@@ -18,172 +19,183 @@ class HomeScreen extends StatelessWidget {
         preferredSize: Size(double.infinity, 70),
         child: HomeAppBar(),
       ),
-      body: CustomScrollView(
-        slivers: [
-          SliverList.list(
-            children: [
-              Stack(
-                children: [
-                  Positioned(
-                    right: 45,
-                    height: screenSize.height * 0.42,
-                    child: Image.asset(
-                      "assets/images/bg-orange.png",
-                      alignment: Alignment.center,
-                      fit: BoxFit.fitWidth,
-                      width: 318,
-                      height: 140,
-                    ),
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      SizedBox(
-                        height: screenSize.height * 0.13,
-                      ),
-                      Image.asset(
-                        "assets/images/illustration.png",
-                        errorBuilder: (context, error, stackTrace) {
-                          return const Center(
-                            child: Icon(Icons.error),
-                          );
-                        },
-                        fit: BoxFit.fitWidth,
-                        width: 249,
-                        height: 84,
-                      ),
-                      SizedBox(
-                        height: screenSize.height * 0.125,
-                      ),
-                      Align(
-                        alignment: Alignment.bottomCenter,
-                        child: Container(
-                          height: screenSize.height * 0.53,
-                          width: screenSize.width,
-                          decoration: const BoxDecoration(
-                            color: AppColors.secondary,
-                            border: Border(
-                              top: BorderSide(
-                                color: AppColors.primary150,
-                                width: 1,
-                              ),
-                            ),
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(20),
-                              topRight: Radius.circular(20),
-                            ),
+      body: Column(
+        // Wrap the body content in a Column
+        children: [
+          Expanded(
+            // Make the CustomScrollView take the available space
+            child: CustomScrollView(
+              slivers: [
+                SliverList.list(
+                  children: [
+                    Stack(
+                      children: [
+                        Positioned(
+                          right: 45,
+                          height: screenSize.height * 0.42,
+                          child: Image.asset(
+                            "assets/images/bg-orange.png",
+                            alignment: Alignment.center,
+                            fit: BoxFit.fitWidth,
+                            width: 318,
+                            height: 140,
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(
-                          left: 24,
-                          top: 16,
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            SizedBox(
+                              height: screenSize.height * 0.13,
+                            ),
+                            Image.asset(
+                              "assets/images/illustration.png",
+                              errorBuilder: (context, error, stackTrace) {
+                                return const Center(
+                                  child: Icon(Icons.error),
+                                );
+                              },
+                              fit: BoxFit.fitWidth,
+                              width: 249,
+                              height: 84,
+                            ),
+                            SizedBox(
+                              height: screenSize.height * 0.125,
+                            ),
+                            Align(
+                              alignment: Alignment.bottomCenter,
+                              child: Container(
+                                height: screenSize.height * 0.53,
+                                width: screenSize.width,
+                                decoration: const BoxDecoration(
+                                  color: AppColors.secondary,
+                                  border: Border(
+                                    top: BorderSide(
+                                      color: AppColors.primary150,
+                                      width: 1,
+                                    ),
+                                  ),
+                                  borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(20),
+                                    topRight: Radius.circular(20),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
-                        child: Column(
+                        Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              'Olá, João',
-                              style: theme.textTheme.headlineMedium,
-                            ),
-                            Text(
-                              "Celebre cada nova vitória!",
-                              style: theme.textTheme.bodyLarge,
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 16, horizontal: 24),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            const SizedBox(height: 60),
-                            Text(
-                              "07",
-                              style: theme.textTheme.headlineLarge,
-                            ),
-                            Text(
-                              "dias sem fumar",
-                              style: theme.textTheme.titleSmall,
-                            ),
-                            const SizedBox(height: 20),
-                            Container(
-                              height: 77,
-                              width: screenSize.width * 0.7,
-                              padding: const EdgeInsets.symmetric(
-                                vertical: 12,
-                                horizontal: 10,
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                left: 24,
+                                top: 16,
                               ),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                border: Border.all(
-                                  color: AppColors.secondaryLight,
-                                  width: 1,
-                                ),
-                                color: AppColors.accent,
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: AppColors.shadow.withOpacity(0.12),
-                                    offset: const Offset(-2, 4),
-                                    blurRadius: 4,
-                                  ),
-                                ],
-                              ),
-                              child: const Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  ContainerSection(
-                                    icon: "confetti",
-                                    value: "140",
-                                    description: "cigarros evitados",
+                                  Text(
+                                    'Olá, João',
+                                    style: theme.textTheme.headlineMedium,
                                   ),
-                                  ContainerSection(
-                                    icon: "coins",
-                                    value: "R\$ 84",
-                                    description: "a mais no seu bolso",
+                                  Text(
+                                    "Celebre cada nova vitória!",
+                                    style: theme.textTheme.bodyLarge,
                                   ),
                                 ],
                               ),
                             ),
-                            const SizedBox(height: 32),
-                            Align(
-                              alignment: Alignment.centerLeft,
-                              child: Text(
-                                "Suas Conquistas",
-                                style: theme.textTheme.titleSmall,
+                            Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 16, horizontal: 24),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  const SizedBox(height: 60),
+                                  Text(
+                                    "07",
+                                    style: theme.textTheme.headlineLarge,
+                                  ),
+                                  Text(
+                                    "dias sem fumar",
+                                    style: theme.textTheme.titleSmall,
+                                  ),
+                                  const SizedBox(height: 20),
+                                  Container(
+                                    height: 77,
+                                    width: screenSize.width * 0.7,
+                                    padding: const EdgeInsets.symmetric(
+                                      vertical: 12,
+                                      horizontal: 10,
+                                    ),
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20),
+                                      border: Border.all(
+                                        color: AppColors.secondaryLight,
+                                        width: 1,
+                                      ),
+                                      color: AppColors.accent,
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: AppColors.shadow
+                                              .withOpacity(0.12),
+                                          offset: const Offset(-2, 4),
+                                          blurRadius: 4,
+                                        ),
+                                      ],
+                                    ),
+                                    child: const Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        ContainerSection(
+                                          icon: "confetti",
+                                          value: "140",
+                                          description: "cigarros evitados",
+                                        ),
+                                        ContainerSection(
+                                          icon: "coins",
+                                          value: "R\$ 84",
+                                          description: "a mais no seu bolso",
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  const SizedBox(height: 32),
+                                  Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: Text(
+                                      "Suas Conquistas",
+                                      style: theme.textTheme.titleSmall,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 16),
+                                ],
                               ),
                             ),
-                            const SizedBox(height: 16),
+                            SizedBox(
+                              height: 160,
+                              width: screenSize.width,
+                              child: ListView.builder(
+                                itemCount: 6,
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 24),
+                                scrollDirection: Axis.horizontal,
+                                itemBuilder: (context, index) {
+                                  return const AchievementCard();
+                                },
+                              ),
+                            ),
                           ],
                         ),
-                      ),
-                      SizedBox(
-                        height: 160,
-                        width: screenSize.width,
-                        child: ListView.builder(
-                          itemCount: 6,
-                          padding: const EdgeInsets.symmetric(horizontal: 24),
-                          scrollDirection: Axis.horizontal,
-                          itemBuilder: (context, index) {
-                            return const AchievementCard();
-                          },
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ],
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
+          const Navbar(),
         ],
       ),
     );
