@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Navbar extends StatelessWidget {
-  const Navbar();
+  const Navbar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class Navbar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           _buildNavItem(Icons.menu_book_outlined, "Conteúdos"),
-          _buildNavItem(Icons.monitor_heart_outlined, "Painel"),
+          _buildNavItemWithImage("assets/images/logo.png", "Painel"),
           _buildNavItem(Icons.favorite_border_outlined, "Apoio"),
         ],
       ),
@@ -27,7 +27,26 @@ class Navbar extends StatelessWidget {
         SizedBox(height: 4),
         Text(
           label,
-          style: TextStyle(fontSize: 12), // Adjust font size as needed
+          style: TextStyle(fontSize: 12),
+        ),
+      ],
+    );
+  }
+
+  // New method to build nav item with an image
+  Widget _buildNavItemWithImage(String imagePath, String label) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Image.asset(
+          imagePath,
+          height: 24,
+          width: 24,
+        ),
+        SizedBox(height: 4),
+        Text(
+          label,
+          style: TextStyle(fontSize: 12),
         ),
       ],
     );
