@@ -1,3 +1,4 @@
+import 'package:cigarrozeroapp/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class ContainerSection extends StatelessWidget {
@@ -22,7 +23,7 @@ class ContainerSection extends StatelessWidget {
               'assets/images/$icon.png',
               width: 22,
               height: 22,
-              color: const Color(0xFF003D83),
+              color: AppColors.primary250,
             ),
             const SizedBox(width: 8),
             Text(
@@ -32,7 +33,7 @@ class ContainerSection extends StatelessWidget {
                 height: 1.3,
                 letterSpacing: -0.011,
                 fontWeight: FontWeight.w700,
-                color: Color(0xFF00408C),
+                color: AppColors.primary250,
               ),
             ),
           ],
@@ -44,7 +45,7 @@ class ContainerSection extends StatelessWidget {
             fontWeight: FontWeight.w400,
             height: 1.3,
             letterSpacing: -0.011,
-            color: Color(0xFF00489D),
+            color: AppColors.primary250,
           ),
         ),
       ],

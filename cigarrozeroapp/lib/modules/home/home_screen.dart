@@ -1,6 +1,8 @@
+import 'package:cigarrozeroapp/theme_data.dart';
 import 'package:flutter/material.dart';
 
 import '../../app_colors.dart';
+import 'widgets/achievement_card.dart';
 import 'widgets/container_section.dart';
 import 'widgets/home_app_bar.dart';
 
@@ -24,17 +26,6 @@ class HomeScreen extends StatelessWidget {
             children: [
               Stack(
                 children: [
-                  Positioned(
-                    right: 45,
-                    height: screenSize.height * 0.42,
-                    child: Image.asset(
-                      "assets/images/bg-orange.png",
-                      alignment: Alignment.center,
-                      fit: BoxFit.fitWidth,
-                      width: 318,
-                      height: 140,
-                    ),
-                  ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
@@ -42,18 +33,18 @@ class HomeScreen extends StatelessWidget {
                         height: screenSize.height * 0.13,
                       ),
                       Image.asset(
-                        "assets/images/illustration.png",
+                        "assets/images/background.png",
                         errorBuilder: (context, error, stackTrace) {
                           return const Center(
                             child: Icon(Icons.error),
                           );
                         },
                         fit: BoxFit.fitWidth,
-                        width: 249,
-                        height: 84,
+                        width: 318,
+                        height: 140,
                       ),
                       SizedBox(
-                        height: screenSize.height * 0.125,
+                        height: screenSize.height * 0.055,
                       ),
                       Align(
                         alignment: Alignment.bottomCenter,
@@ -61,7 +52,7 @@ class HomeScreen extends StatelessWidget {
                           height: screenSize.height * 0.53,
                           width: screenSize.width,
                           decoration: const BoxDecoration(
-                            color: AppColors.secondary,
+                            color: Color(0xFFE4ECF5),
                             border: Border(
                               top: BorderSide(
                                 color: AppColors.primary150,
@@ -90,11 +81,16 @@ class HomeScreen extends StatelessWidget {
                           children: [
                             Text(
                               'Olá, João',
-                              style: theme.textTheme.headlineMedium,
+                              style: theme.textTheme.headlineSmall,
                             ),
                             Text(
                               "Celebre cada nova vitória!",
-                              style: theme.textTheme.bodyLarge,
+                              style: theme.textTheme.bodySmall
+                                  ?.copyWith(
+                                    color: AppColors.primary300,
+                                    letterSpacing: 0,
+                                  )
+                                  .fontHeight(19.6),
                             ),
                           ],
                         ),
@@ -108,11 +104,12 @@ class HomeScreen extends StatelessWidget {
                             const SizedBox(height: 60),
                             Text(
                               "07",
-                              style: theme.textTheme.headlineLarge,
+                              style: theme.textTheme.displayLarge,
                             ),
                             Text(
                               "dias sem fumar",
-                              style: theme.textTheme.titleSmall,
+                              style:
+                                  theme.textTheme.titleSmall?.fontHeight(19.2),
                             ),
                             const SizedBox(height: 20),
                             Container(
@@ -125,13 +122,13 @@ class HomeScreen extends StatelessWidget {
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
                                 border: Border.all(
-                                  color: AppColors.secondaryLight,
+                                  color: const Color(0xFFE0E6EE),
                                   width: 1,
                                 ),
-                                color: AppColors.accent,
+                                color: AppColors.whiteShade50,
                                 boxShadow: [
                                   BoxShadow(
-                                    color: AppColors.shadow.withOpacity(0.12),
+                                    color: Colors.black.withOpacity(0.12),
                                     offset: const Offset(-2, 4),
                                     blurRadius: 4,
                                   ),
@@ -159,15 +156,16 @@ class HomeScreen extends StatelessWidget {
                               alignment: Alignment.centerLeft,
                               child: Text(
                                 "Suas Conquistas",
-                                style: theme.textTheme.titleSmall,
+                                style: theme.textTheme.titleSmall
+                                    ?.copyWith(fontWeight: FontWeight.w600)
+                                    .fontHeight(19.2),
                               ),
                             ),
-                            const SizedBox(height: 16),
                           ],
                         ),
                       ),
                       SizedBox(
-                        height: 160,
+                        height: 183,
                         width: screenSize.width,
                         child: ListView.builder(
                           itemCount: 6,
@@ -185,145 +183,6 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
         ],
-      ),
-    );
-  }
-}
-
-class AchievementCardContainer extends StatelessWidget {
-  AchievementCardContainer({
-    required this.mediaQuery,
-  });
-
-  final Size mediaQuery;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 77,
-      width: mediaQuery.width * 0.7,
-      padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 10),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: const Color(0xFFE0E6EE), width: 1),
-        color: const Color(0xFFFCFCFC),
-        boxShadow: [
-          BoxShadow(
-            color: const Color(0xFF000000).withOpacity(0.12),
-            offset: const Offset(-2, 4),
-            blurRadius: 4,
-          ),
-        ],
-      ),
-      child: const Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          ContainerSection(
-            icon: "confetti",
-            value: "140",
-            description: "cigarros evitados",
-          ),
-          ContainerSection(
-            icon: "coins",
-            value: "R\$ 84",
-            description: "a mais no seu bolso",
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class AchievementCard extends StatelessWidget {
-  const AchievementCard({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-
-    return Padding(
-      padding: const EdgeInsets.only(right: 12),
-      child: Card(
-        shape: theme.cardTheme.shape,
-        color: theme.cardTheme.color,
-        child: Container(
-          width: 141.73,
-          height: 160,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(13.84),
-            color: theme.cardTheme.color,
-            boxShadow: [
-              BoxShadow(
-                color: theme.cardTheme.shadowColor!,
-                offset: const Offset(-2.21, 2.21),
-              ),
-            ],
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(8.8),
-            child: SizedBox(
-              width: 124,
-              height: 130,
-              child: Column(
-                children: [
-                  Container(
-                    width: 124,
-                    height: 71,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(11),
-                      border: Border.all(
-                        color: const Color(0xFF8AADD8),
-                        width: 0.83,
-                      ),
-                    ),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(11),
-                      child: Image.asset(
-                        "assets/images/img.png",
-                        fit: BoxFit.fitHeight,
-                        errorBuilder: (context, error, stackTrace) {
-                          return const Center(
-                            child: Icon(Icons.error),
-                          );
-                        },
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 4.4),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "Após 20 min",
-                        style: theme.textTheme.bodySmall!.copyWith(
-                          fontWeight: FontWeight.w700,
-                          color: AppColors.primary400,
-                          height: 1.3,
-                          fontSize: 9.9,
-                        ),
-                      ),
-                      Image.asset(
-                        "assets/images/trophy.png",
-                        width: 15.5,
-                        height: 14.5,
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 4.4),
-                  Text(
-                    "Sua pressão arterial e frequência cardíaca diminuem",
-                    style: theme.textTheme.bodySmall!.copyWith(
-                      color: AppColors.primary500,
-                      height: 1.2,
-                      fontSize: 8.86,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
       ),
     );
   }
