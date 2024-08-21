@@ -19,27 +19,6 @@ class Navbar extends StatelessWidget {
     );
   }
 
-  Widget _buildNavItem(IconData icon, String label) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Icon(icon),
-        SizedBox(height: 4),
-        Text(
-          label,
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            fontFamily: 'Inter',
-            fontSize: 12,
-            fontWeight: FontWeight.w500,
-            height: 16 / 12,
-            letterSpacing: 0.03999999910593033,
-          ),
-        ),
-      ],
-    );
-  }
-
   Widget _buildNavItemWithImage(String imagePath, String label) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
