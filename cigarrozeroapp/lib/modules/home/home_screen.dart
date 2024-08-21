@@ -20,10 +20,8 @@ class HomeScreen extends StatelessWidget {
         child: HomeAppBar(),
       ),
       body: Column(
-        // Wrap the body content in a Column
         children: [
           Expanded(
-            // Make the CustomScrollView take the available space
             child: CustomScrollView(
               slivers: [
                 SliverList.list(

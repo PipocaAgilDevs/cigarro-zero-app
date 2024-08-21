@@ -33,7 +33,6 @@ class Navbar extends StatelessWidget {
     );
   }
 
-  // New method to build nav item with an image
   Widget _buildNavItemWithImage(String imagePath, String label) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
