@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../app_colors.dart';
 
 class Navbar extends StatelessWidget {
   const Navbar({super.key});
@@ -13,21 +14,37 @@ class Navbar extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            _buildNavItemWithImage("assets/images/books.png", "Conteúdos"),
-            _buildNavItemWithImage("assets/images/logo.png", "Painel"),
-            _buildNavItemWithImage("assets/images/heartbeat.png", "Apoio"),
+            NavItemWithImage(
+                imagePath: "assets/images/books.png", label: "Conteúdos"),
+            NavItemWithImage(
+                imagePath: "assets/images/logo.png", label: "Painel"),
+            NavItemWithImage(
+                imagePath: "assets/images/heartbeat.png", label: "Apoio"),
           ],
         ),
       ),
     );
   }
+}
 
-  Widget _buildNavItemWithImage(String imagePath, String label) {
+class NavItemWithImage extends StatelessWidget {
+  final String imagePath;
+  final String label;
+
+  const NavItemWithImage({
+    super.key,
+    required this.imagePath,
+    required this.label,
+  });
+
+  @override
+  Widget build(BuildContext context) {
     return Column(
       mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Image.asset(
+          color: AppColors.greyShades500,
           imagePath,
           height: 24,
           width: 24,
@@ -40,6 +57,7 @@ class Navbar extends StatelessWidget {
           label,
           textAlign: TextAlign.left,
           style: TextStyle(
+            color: AppColors.greyShades500,
             fontFamily: 'Inter',
             fontSize: 12,
             fontWeight: FontWeight.w500,

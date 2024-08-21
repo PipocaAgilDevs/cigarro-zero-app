@@ -14,4 +14,5 @@ class AppColors {
   static const Color textPrimary = Color(0xFF003169);
   static const Color textSecondary = Color(0xFF00408C);
   static const Color shadow = Color(0xFF000000);
+  static const Color greyShades500 = Color(0xFF1C1C1C);
 }
