@@ -11,9 +11,9 @@ class Navbar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          _buildNavItem(Icons.menu_book_outlined, "Conteúdos"),
+          _buildNavItemWithImage("assets/images/books.png", "Conteúdos"),
           _buildNavItemWithImage("assets/images/logo.png", "Painel"),
-          _buildNavItem(Icons.favorite_border_outlined, "Apoio"),
+          _buildNavItemWithImage("assets/images/heartbeat.png", "Apoio"),
         ],
       ),
     );
@@ -27,7 +27,14 @@ class Navbar extends StatelessWidget {
         SizedBox(height: 4),
         Text(
           label,
-          style: TextStyle(fontSize: 12),
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontFamily: 'Inter',
+            fontSize: 12,
+            fontWeight: FontWeight.w500,
+            height: 16 / 12,
+            letterSpacing: 0.03999999910593033,
+          ),
         ),
       ],
     );
@@ -45,7 +52,14 @@ class Navbar extends StatelessWidget {
         SizedBox(height: 4),
         Text(
           label,
-          style: TextStyle(fontSize: 12),
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontFamily: 'Inter',
+            fontSize: 12,
+            fontWeight: FontWeight.w500,
+            height: 16 / 12,
+            letterSpacing: 0.03999999910593033,
+          ),
         ),
       ],
     );
