@@ -17,13 +17,20 @@ final ThemeData appTheme = ThemeData(
     ).fontHeight(62.4),
     // displayMedium: ///h2,
     // displaySmall: ///h3,
-    headlineLarge: const TextStyle(
+    headlineLarge: TextStyle(
       ///done
       ///h4
       fontSize: 28,
       fontWeight: FontWeight.w600,
       letterSpacing: -0.011,
       color: AppColors.primary200,
+      shadows: [
+        Shadow(
+          color: Colors.black.withOpacity(0.12),
+          offset: const Offset(0, 4),
+          blurRadius: 8,
+        ),
+      ],
     ).fontHeight(33.6),
     headlineMedium: const TextStyle(
       ///h5

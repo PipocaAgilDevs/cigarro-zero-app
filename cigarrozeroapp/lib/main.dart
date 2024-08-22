@@ -1,6 +1,7 @@
-import 'package:cigarrozeroapp/modules/home/home_screen.dart';
 import 'package:cigarrozeroapp/theme_data.dart';
 import 'package:flutter/material.dart';
+
+import 'design system/onboarding/design_system_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: appTheme,
-      home: const HomeScreen(),
+      debugShowCheckedModeBanner: false,
+      // home: const HomeScreen(),
+      home: const DesignSystemScreen(),
     );
   }
 }
