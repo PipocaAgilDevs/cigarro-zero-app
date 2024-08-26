@@ -14,7 +14,7 @@ Clone o Repositório:
 git clone https://github.com/PipocaAgilDevs/cigarro-zero-app.git
 
 Navegue até o Diretório:
-`cd cigarro-zero-app/cigarrozeroapp`
+`cd cigarro-zero-app`
 
 Instale as Dependências:
 `flutter pub get`
@@ -29,16 +29,16 @@ Execute o Aplicativo:
 Modo Debug (para testes):
 `flutter build apk`
 
-O APK gerado estará em cigarrozeroapp/build/app/outputs/flutter-apk/app-debug.apk.
+O APK gerado estará em build/app/outputs/flutter-apk/app-debug.apk.
 
 Modo Release (para publicação):
 `flutter build apk --release`
 
-O APK gerado estará em cigarrozeroapp/build/app/outputs/flutter-apk/app-release.apk.
+O APK gerado estará em build/app/outputs/flutter-apk/app-release.apk.
 
 - AAB (Android App Bundle)
 
 Modo Release:
 `flutter build appbundle --release`
 
-O AAB gerado estará em build/app/outputs/bundle/release/app-release.aab..
+O AAB gerado estará em build/app/outputs/bundle/release/app-release.aab.
