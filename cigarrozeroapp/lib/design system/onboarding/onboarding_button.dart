@@ -62,11 +62,11 @@ class OnboardingButton extends StatelessWidget {
         child: Text(
           text,
           style: const TextStyle(
-                  color: AppColors.whiteShade50,
-                  fontSize: 18,
-                  fontWeight: FontWeight.w600,
-                  letterSpacing: 0.011)
-              .fontHeight(27),
+            color: AppColors.whiteShade50,
+            fontSize: 18,
+            fontWeight: FontWeight.w600,
+            letterSpacing: 0.011,
+          ).fontHeight(27),
         ),
       ),
     );

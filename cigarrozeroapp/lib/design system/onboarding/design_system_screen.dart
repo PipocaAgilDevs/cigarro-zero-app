@@ -1,6 +1,8 @@
 import 'package:cigarrozeroapp/design%20system/onboarding/onboarding_button.dart';
 import 'package:flutter/material.dart';
 
+import 'avatar_widget.dart';
+import 'conversation.dart';
 import 'custom_dot_indicator.dart';
 
 class DesignSystemScreen extends StatelessWidget {
@@ -10,7 +12,7 @@ class DesignSystemScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [
               Color(0xFFB0C9E7),
@@ -19,7 +21,7 @@ class DesignSystemScreen extends StatelessWidget {
             ],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            stops: const [0.15, 0.36, 1],
+            stops: [0.15, 0.36, 1],
           ),
         ),
         child: SafeArea(
@@ -29,11 +31,17 @@ class DesignSystemScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                SizedBox(height: 500),
+                const AvatarWidget(),
+                const ConversationWidget(
+                  isAvatarResponse: false,
+                  isBottomLeftBorderRounded: false,
+                  text: 'Olá, eu sou o Zero! Vamos começar?',
+                ),
+                const SizedBox(height: 500),
                 OnboardingButton(onPressed: () {}),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 const CustomDotIndicator(),
-                SizedBox(height: 5),
+                const SizedBox(height: 5),
               ],
             ),
           ),
