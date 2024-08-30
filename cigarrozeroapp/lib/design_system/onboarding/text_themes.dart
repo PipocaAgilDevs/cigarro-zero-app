@@ -32,7 +32,7 @@ class OnboardingDesignSystem {
 
   static TextStyle bodyAnswers =
 
-      ///estilo das perguntas
+      ///estilo das respostas
       const TextStyle(
     color: AppColors.whiteShade450,
     fontSize: 14,

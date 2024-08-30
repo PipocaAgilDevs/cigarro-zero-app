@@ -1,9 +1,10 @@
+import 'package:cigarrozeroapp/theme_data.dart';
 import 'package:flutter/material.dart';
 
 import '../../app_colors.dart';
 
 class ConversationWidget extends StatelessWidget {
-  final bool isAvatarResponse;
+  final bool isAvatarQuestion;
   final bool isBottomLeftBorderRounded;
   final bool isBottomRightBorderRounded;
   final bool isTopRightBorderRounded;
@@ -11,7 +12,7 @@ class ConversationWidget extends StatelessWidget {
 
   const ConversationWidget({
     super.key,
-    this.isAvatarResponse = true,
+    this.isAvatarQuestion = true,
     this.isBottomLeftBorderRounded = true,
     this.isBottomRightBorderRounded = true,
     this.isTopRightBorderRounded = true,
@@ -21,15 +22,15 @@ class ConversationWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(
-          vertical: 10, horizontal: 15), //todo conferir
+      alignment: Alignment.center,
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
       width: 255,
       height: 60,
       decoration: BoxDecoration(
         color: AppColors.whiteShade50,
         border: Border.all(
           color:
-              isAvatarResponse ? AppColors.primary150 : AppColors.secondary150,
+              isAvatarQuestion ? AppColors.primary150 : AppColors.secondary150,
           width: 1,
         ),
         borderRadius: BorderRadius.only(
@@ -46,11 +47,14 @@ class ConversationWidget extends StatelessWidget {
       ),
       child: Text(
         text,
-        style: const TextStyle(
-          color: AppColors
-              .primary400, //todo condicional if is avatar ? cinza : black
-          fontSize: 16, //todo editar estilo
-        ),
+        style: TextStyle(
+          color: isAvatarQuestion
+              ? AppColors.whiteShade450
+              : AppColors.greyShade500,
+          fontSize: 14,
+          letterSpacing: 0.011,
+          fontWeight: FontWeight.w400,
+        ).fontHeight(19.6),
       ),
     );
   }

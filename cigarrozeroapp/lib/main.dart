@@ -1,7 +1,7 @@
-import 'package:cigarrozeroapp/theme_data.dart';
 import 'package:flutter/material.dart';
 
-import 'design system/onboarding/design_system_screen.dart';
+import 'design_system/onboarding/design_system_screen.dart';
+import 'theme_data.dart';
 
 void main() {
   runApp(const MyApp());
