@@ -1,7 +1,7 @@
-import 'package:cigarrozeroapp/modules/home/home_screen.dart';
 import 'package:flutter/material.dart';
 
-import 'theme_data.dart';
+import '../../theme_data.dart';
+import 'design_system_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,11 +13,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Cigarro Zero',
+      title: 'Cigarro Zero - onboarding design system',
       theme: appTheme,
       debugShowCheckedModeBanner: false,
       // home: const HomeScreen(),
-      home: const HomeScreen(),
+      home: const DesignSystemScreen(),
     );
   }
 }
