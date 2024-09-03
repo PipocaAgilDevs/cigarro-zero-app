@@ -1,16 +1,44 @@
 # cigarrozeroapp
 
-A new Flutter project.
+Este é um guia rápido para configurar, executar e gerar builds do seu aplicativo Flutter.
+Pré-requisitos
 
-## Getting Started
+- Flutter SDK: Certifique-se de ter o Flutter SDK instalado e configurado corretamente em sua máquina.
+- Android Studio: Tenha o Android Studio instalado e configurado com as ferramentas de desenvolvimento Android necessárias.
+- Emulador ou Dispositivo Físico: Para testar seu aplicativo, você precisará de um emulador Android ou um dispositivo físico conectado ao seu computador.
+- VSCode: Certifique de ter as extensões necessárias para rodar projetos flutter em seu CLI.
 
-This project is a starting point for a Flutter application.
+Executando o Projeto
 
-A few resources to get you started if this is your first Flutter project:
+Clone o Repositório:
+git clone https://github.com/PipocaAgilDevs/cigarro-zero-app.git
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Navegue até o Diretório:
+`cd cigarro-zero-app`
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Instale as Dependências:
+`flutter pub get`
+
+Execute o Aplicativo:
+`flutter run`
+
+## Gerando Builds
+
+- APK (Android Package Kit)
+
+Modo Debug (para testes):
+`flutter build apk`
+
+O APK gerado estará em build/app/outputs/flutter-apk/app-debug.apk.
+
+Modo Release (para publicação):
+`flutter build apk --release`
+
+O APK gerado estará em build/app/outputs/flutter-apk/app-release.apk.
+
+- AAB (Android App Bundle)
+
+Modo Release:
+`flutter build appbundle --release`
+
+O AAB gerado estará em build/app/outputs/bundle/release/app-release.aab.

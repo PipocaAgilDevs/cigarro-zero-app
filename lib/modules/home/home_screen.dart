@@ -1,3 +1,4 @@
+import 'package:cigarrozeroapp/modules/home/widgets/navbar.dart';
 import 'package:cigarrozeroapp/theme_data.dart';
 import 'package:flutter/material.dart';
 
@@ -44,7 +45,7 @@ class HomeScreen extends StatelessWidget {
                         height: 140,
                       ),
                       SizedBox(
-                        height: screenSize.height * 0.055,
+                        height: screenSize.height * 0.01,
                       ),
                       Align(
                         alignment: Alignment.bottomCenter,
@@ -180,6 +181,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
+              const Navbar(),
             ],
           ),
         ],

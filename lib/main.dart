@@ -16,7 +16,6 @@ class MyApp extends StatelessWidget {
       title: 'Cigarro Zero',
       theme: appTheme,
       debugShowCheckedModeBanner: false,
-      // home: const HomeScreen(),
       home: const HomeScreen(),
     );
   }
