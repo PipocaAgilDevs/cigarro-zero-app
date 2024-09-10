@@ -1,4 +1,4 @@
-import 'package:cigarrozeroapp/modules/home/home_screen.dart';
+import 'package:cigarrozeroapp/modules/onboarding/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'theme_data.dart';
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Cigarro Zero',
       theme: appTheme,
       debugShowCheckedModeBanner: false,
-      home: const HomeScreen(),
+      home: const OnboardingScreen(),
     );
   }
 }

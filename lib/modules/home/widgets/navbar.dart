@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../../app_colors.dart';
 
 class Navbar extends StatelessWidget {
@@ -9,17 +10,23 @@ class Navbar extends StatelessWidget {
     return Container(
       height: 60,
       color: Colors.white,
-      child: Padding(
-        padding: const EdgeInsets.only(right: 26),
+      child: const Padding(
+        padding: EdgeInsets.only(right: 26),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             NavItemWithImage(
-                imagePath: "assets/images/books.png", label: "Conteúdos"),
+              imagePath: "assets/images/books.png",
+              label: "Conteúdos",
+            ),
             NavItemWithImage(
-                imagePath: "assets/images/logo.png", label: "Painel"),
+              imagePath: "assets/images/logo.png",
+              label: "Painel",
+            ),
             NavItemWithImage(
-                imagePath: "assets/images/heartbeat.png", label: "Apoio"),
+              imagePath: "assets/images/heartbeat.png",
+              label: "Apoio",
+            ),
           ],
         ),
       ),
@@ -44,20 +51,20 @@ class NavItemWithImage extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Image.asset(
-          color: AppColors.greyShades500,
+          color: AppColors.greyShade500,
           imagePath,
           height: 24,
           width: 24,
           errorBuilder: (context, error, stackTrace) {
-            return Icon(Icons.error);
+            return const Icon(Icons.error);
           },
         ),
-        SizedBox(height: 4),
+        const SizedBox(height: 4),
         Text(
           label,
           textAlign: TextAlign.left,
-          style: TextStyle(
-            color: AppColors.greyShades500,
+          style: const TextStyle(
+            color: AppColors.greyShade500,
             fontFamily: 'Inter',
             fontSize: 12,
             fontWeight: FontWeight.w500,

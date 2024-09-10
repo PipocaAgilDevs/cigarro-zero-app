@@ -18,9 +18,10 @@ final ThemeData appTheme = ThemeData(
     // displayMedium: ///h2,
     // displaySmall: ///h3,
     headlineLarge: TextStyle(
-      ///done
+      ///falta só a font oswald
       ///h4
       fontSize: 28,
+      fontFamily: 'Oswald',
       fontWeight: FontWeight.w600,
       letterSpacing: -0.011,
       color: AppColors.primary200,
@@ -63,6 +64,7 @@ final ThemeData appTheme = ThemeData(
       fontSize: 16,
       fontWeight: FontWeight.w500,
       letterSpacing: -0.011,
+      color: AppColors.primary500,
     ).fontHeight(22.4),
     bodyLarge: const TextStyle(
       fontSize: 14,
