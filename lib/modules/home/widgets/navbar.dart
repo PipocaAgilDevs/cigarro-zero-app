@@ -44,7 +44,7 @@ class NavItemWithImage extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Image.asset(
-          color: AppColors.greyShades500,
+          color: AppColors.greyShade500,
           imagePath,
           height: 24,
           width: 24,
@@ -57,7 +57,7 @@ class NavItemWithImage extends StatelessWidget {
           label,
           textAlign: TextAlign.left,
           style: TextStyle(
-            color: AppColors.greyShades500,
+            color: AppColors.greyShade500,
             fontFamily: 'Inter',
             fontSize: 12,
             fontWeight: FontWeight.w500,
