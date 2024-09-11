@@ -21,7 +21,6 @@ class HomeScreen extends StatelessWidget {
         preferredSize: Size(double.infinity, 70),
         child: HomeAppBar(),
       ),
-      // Adicione a Navbar aqui
       bottomNavigationBar: const Navbar(),
       body: CustomScrollView(
         slivers: [
@@ -183,7 +182,6 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              // Removemos a Navbar daqui
             ],
           ),
         ],
