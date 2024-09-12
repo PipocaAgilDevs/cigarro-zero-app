@@ -35,6 +35,8 @@ final ThemeData appTheme = ThemeData(
     ).fontHeight(33.6),
     headlineMedium: const TextStyle(
       ///h5
+      ///done
+      fontFamily: 'Oswald',
       fontSize: 24,
       fontWeight: FontWeight.w600,
       letterSpacing: -0.011,

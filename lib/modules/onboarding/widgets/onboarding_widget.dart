@@ -13,7 +13,7 @@ class OnboardingWidget extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          const SizedBox(height: 82),
+          const SizedBox(height: 100),
           Text(
             'COMECE UMA VIDA',
             style: OnboardingDesignSystem.title,
@@ -53,7 +53,7 @@ class OnboardingWidget extends StatelessWidget {
               width: 308,
             ),
           ),
-          const SizedBox(height: 46),
+          const SizedBox(height: 40),
         ],
       ),
     );

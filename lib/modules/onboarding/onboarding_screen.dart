@@ -1,3 +1,4 @@
+import 'package:cigarrozeroapp/modules/onboarding/widgets/onboarding_two_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../../design_system/onboarding/custom_dot_indicator.dart';
@@ -20,11 +21,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     final theme = Theme.of(context);
 
     return Scaffold(
-      backgroundColor: Color(0xFFAFC7E5),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const SizedBox(height: 30),
             SizedBox(
               height: 728,
               child: PageView(
@@ -36,7 +35,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 },
                 children: const [
                   OnboardingWidget(),
-                  Center(child: Text('Page 3')),
+                  OnboardingTwoWidget(),
                   Center(child: Text('Page 4')),
                   Center(child: Text('Page 5')),
                   Center(child: Text('Page 6')),
