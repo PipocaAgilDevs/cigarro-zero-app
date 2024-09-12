@@ -13,7 +13,7 @@ class AvatarWidget extends StatelessWidget {
     return Stack(
       alignment: Alignment.center,
       children: [
-        Container(
+        SizedBox(
           width: 250,
           height: 300,
           child: Image.asset(
