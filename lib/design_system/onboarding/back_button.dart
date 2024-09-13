@@ -9,7 +9,7 @@ class IOSBackButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return IconButton(
       icon: const Icon(Icons.arrow_back_ios),
-      iconSize: 16.5,
+      iconSize: 24,
       color: const Color(0xFF1C1C1C),
       onPressed: () {
         if (onPressed != null) {

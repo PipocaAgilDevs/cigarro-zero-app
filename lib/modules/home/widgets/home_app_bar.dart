@@ -22,7 +22,7 @@ class HomeAppBar extends StatelessWidget {
                     Text(
                       "Cigarro Zero",
                       style: GoogleFonts.oswald(
-                        color: Color(0xFF001C3E),
+                        color: const Color(0xFF001C3E),
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
                         height: 22.4 / 16,
@@ -31,7 +31,7 @@ class HomeAppBar extends StatelessWidget {
                       textAlign: TextAlign.center,
                     ),
                     const SizedBox(height: 2),
-                    Text(
+                    const Text(
                       "Meu Progresso",
                       style: TextStyle(
                         color: Color(0xFF475467),

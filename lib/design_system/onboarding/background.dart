@@ -11,10 +11,11 @@ class Background extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.all(24),
       decoration: const BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            Color(0xFFB0C9E7),
+            Color(0xFFAFC7E5),
             Color(0xFFB7CCE7),
             Color(0xFFFEFEFE),
           ],

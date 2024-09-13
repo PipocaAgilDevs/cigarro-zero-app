@@ -7,9 +7,14 @@ import 'conversation.dart';
 import 'custom_dot_indicator.dart';
 import 'onboarding_button.dart';
 
-class DesignSystemScreen extends StatelessWidget {
+class DesignSystemScreen extends StatefulWidget {
   const DesignSystemScreen({super.key});
 
+  @override
+  State<DesignSystemScreen> createState() => _DesignSystemScreenState();
+}
+
+class _DesignSystemScreenState extends State<DesignSystemScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +34,10 @@ class DesignSystemScreen extends StatelessWidget {
               const SizedBox(height: 300),
               OnboardingButton(onPressed: () {}),
               const SizedBox(height: 20),
-              const CustomDotIndicator(),
+              CustomDotIndicator(
+                currentIndex: 1,
+                onTap: (int position) {},
+              ),
               const SizedBox(height: 5),
             ],
           ),
