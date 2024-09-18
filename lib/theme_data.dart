@@ -3,8 +3,14 @@ import 'package:flutter/material.dart';
 import 'app_colors.dart';
 
 final ThemeData appTheme = ThemeData(
-  primaryColor: AppColors.primary400,
+  primaryColor: AppColors.whiteShade50,
   scaffoldBackgroundColor: Colors.white,
+  pageTransitionsTheme: const PageTransitionsTheme(
+    builders: {
+      TargetPlatform.android: CupertinoPageTransitionsBuilder(),
+      TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
+    },
+  ),
   textTheme: TextTheme(
     displayLarge:
 
@@ -52,6 +58,7 @@ final ThemeData appTheme = ThemeData(
       ///subtitle large
       fontSize: 24,
       fontWeight: FontWeight.w500,
+      color: AppColors.secondary200,
       letterSpacing: -0.011,
     ).fontHeight(36),
     titleMedium: const TextStyle(

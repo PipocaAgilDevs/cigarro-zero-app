@@ -34,6 +34,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 children: const [
                   OnboardingWidget(),
                   OnboardingTwoWidget(),
+                  Center(child: Text('Page 3')),
                   Center(child: Text('Page 4')),
                   Center(child: Text('Page 5')),
                   Center(child: Text('Page 6')),
@@ -45,12 +46,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             const SizedBox(height: 20),
             OnboardingButton(
               onPressed: () {
-                if (_currentPage < 7) {
-                  _pageController.nextPage(
-                    duration: const Duration(milliseconds: 300),
-                    curve: Curves.easeInOut,
-                  );
+                if (_currentPage == 7) {
+                  Navigator.pushReplacementNamed(context, '/final_onboarding');
                 }
+
+                _pageController.nextPage(
+                  duration: const Duration(milliseconds: 300),
+                  curve: Curves.easeInOut,
+                );
               },
             ),
             const SizedBox(height: 20),
