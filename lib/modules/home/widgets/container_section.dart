@@ -1,5 +1,6 @@
-import 'package:cigarrozeroapp/app_colors.dart';
 import 'package:flutter/material.dart';
+
+import '../../../app_colors.dart';
 
 class ContainerSection extends StatelessWidget {
   final String icon;

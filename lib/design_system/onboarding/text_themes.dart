@@ -1,7 +1,7 @@
-import 'package:cigarrozeroapp/theme_data.dart';
 import 'package:flutter/material.dart';
 
 import '../../app_colors.dart';
+import '../../theme_data.dart';
 
 class OnboardingDesignSystem {
   static TextStyle title = TextStyle(
