@@ -1,7 +1,7 @@
-import 'package:cigarrozeroapp/design_system/onboarding/onboarding_button.dart';
 import 'package:flutter/material.dart';
 
 import '../../design_system/onboarding/back_button.dart';
+import '../../design_system/onboarding/onboarding_button.dart';
 
 class FinalOnboardingScreen extends StatelessWidget {
   const FinalOnboardingScreen({super.key});
