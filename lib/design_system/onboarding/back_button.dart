@@ -12,12 +12,7 @@ class IOSBackButton extends StatelessWidget {
       iconSize: 24,
       color: const Color(0xFF1C1C1C),
       onPressed: () {
-        if (onPressed != null) {
-          onPressed!();
-
-          return;
-        }
-        Navigator.of(context).pop();
+        onPressed!() ?? Navigator.of(context).pop();
       },
     );
   }

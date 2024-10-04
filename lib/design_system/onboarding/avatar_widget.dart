@@ -13,19 +13,19 @@ class AvatarWidget extends StatelessWidget {
     return Stack(
       alignment: Alignment.center,
       children: [
-        SizedBox(
-          width: 250,
-          height: 300,
-          child: Image.asset(
-            isAvatar
-                ? 'assets/images/yellow_ellipse.png'
-                : 'assets/images/blue_ellipse.png',
-          ),
+        Image.asset(
+          isAvatar
+              ? 'assets/images/blue_ellipse.png'
+              : 'assets/images/yellow_ellipse.png',
+          width: 64,
+          height: 64,
         ),
         Image.asset(
           isAvatar
-              ? 'assets/images/logo_avatar.png'
-              : 'assets/images/user_avatar.png',
+              ? 'assets/images/user_avatar.png'
+              : 'assets/images/logo_avatar.png',
+          width: 64,
+          height: 64,
         ),
       ],
     );

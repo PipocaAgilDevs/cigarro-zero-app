@@ -9,6 +9,7 @@ class ConversationWidget extends StatelessWidget {
   final bool isBottomRightBorderRounded;
   final bool isTopRightBorderRounded;
   final String text;
+  final Widget? child;
 
   const ConversationWidget({
     super.key,
@@ -17,6 +18,7 @@ class ConversationWidget extends StatelessWidget {
     this.isBottomRightBorderRounded = true,
     this.isTopRightBorderRounded = true,
     required this.text,
+    this.child,
   });
 
   @override
@@ -45,17 +47,19 @@ class ConversationWidget extends StatelessWidget {
               : Radius.zero,
         ),
       ),
-      child: Text(
-        text,
-        style: TextStyle(
-          color: isAvatarQuestion
-              ? AppColors.whiteShade450
-              : AppColors.greyShade500,
-          fontSize: 14,
-          letterSpacing: 0.011,
-          fontWeight: FontWeight.w400,
-        ).fontHeight(19.6),
-      ),
+      child: child != null
+          ? Center(child: child)
+          : Text(
+              text,
+              style: TextStyle(
+                color: isAvatarQuestion
+                    ? AppColors.whiteShade450
+                    : AppColors.greyShade500,
+                fontSize: 14,
+                letterSpacing: 0.011,
+                fontWeight: FontWeight.w400,
+              ).fontHeight(19.6),
+            ),
     );
   }
 }
