@@ -1,6 +1,6 @@
-import 'package:cigarrozeroapp/design_system/onboarding/back_button.dart';
 import 'package:flutter/material.dart';
 
+import '../../../design_system/onboarding/back_button.dart';
 import '../../../design_system/onboarding/background.dart';
 import '../../../design_system/onboarding/text_themes.dart';
 

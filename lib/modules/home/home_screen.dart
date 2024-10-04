@@ -1,11 +1,11 @@
-import 'package:cigarrozeroapp/modules/home/widgets/navbar.dart';
-import 'package:cigarrozeroapp/theme_data.dart';
 import 'package:flutter/material.dart';
 
 import '../../app_colors.dart';
+import '../../theme_data.dart';
 import 'widgets/achievement_card.dart';
 import 'widgets/container_section.dart';
 import 'widgets/home_app_bar.dart';
+import 'widgets/navbar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

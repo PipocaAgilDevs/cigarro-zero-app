@@ -1,8 +1,8 @@
-import 'package:cigarrozeroapp/design_system/onboarding/background.dart';
 import 'package:flutter/material.dart';
 
 import 'avatar_widget.dart';
 import 'back_button.dart';
+import 'background.dart';
 import 'conversation.dart';
 import 'custom_dot_indicator.dart';
 import 'onboarding_button.dart';

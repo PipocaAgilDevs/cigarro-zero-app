@@ -1,8 +1,8 @@
-import 'package:cigarrozeroapp/modules/onboarding/widgets/onboarding_two_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../../design_system/onboarding/custom_dot_indicator.dart';
 import '../../design_system/onboarding/onboarding_button.dart';
+import 'widgets/onboarding_two_widget.dart';
 import 'widgets/onboarding_widget.dart';
 
 class OnboardingScreen extends StatefulWidget {
