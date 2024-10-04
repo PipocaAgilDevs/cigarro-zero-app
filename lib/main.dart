@@ -1,8 +1,10 @@
-import 'package:cigarrozeroapp/modules/home/home_screen.dart';
-import 'package:cigarrozeroapp/modules/onboarding/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 
+import 'modules/home/home_screen.dart';
+import 'modules/onboarding/onboarding_screen.dart';
+import 'modules/splash/splash_screen.dart';
 import 'modules/final_onboarding/final_onboarding_screen.dart';
+
 import 'theme_data.dart';
 
 void main() {
@@ -22,8 +24,9 @@ class MyApp extends StatelessWidget {
         '/onboarding': (context) => const OnboardingScreen(),
         '/final_onboarding': (context) => const FinalOnboardingScreen(),
         '/home': (context) => const HomeScreen(),
+        '/': (context) => const SplashScreen(),
       },
-      initialRoute: '/onboarding',
+      initialRoute: '/',
     );
   }
 }
