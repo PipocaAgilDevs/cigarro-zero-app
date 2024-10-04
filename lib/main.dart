@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'modules/home/home_screen.dart';
 import 'modules/onboarding/onboarding_screen.dart';
 import 'modules/splash/splash_screen.dart';
+import 'modules/final_onboarding/final_onboarding_screen.dart';
+
 import 'theme_data.dart';
 
 void main() {
@@ -19,9 +21,10 @@ class MyApp extends StatelessWidget {
       theme: appTheme,
       debugShowCheckedModeBanner: false,
       routes: {
-        '/': (context) => const SplashScreen(),
         '/onboarding': (context) => const OnboardingScreen(),
+        '/final_onboarding': (context) => const FinalOnboardingScreen(),
         '/home': (context) => const HomeScreen(),
+        '/': (context) => const SplashScreen(),
       },
       initialRoute: '/',
     );
