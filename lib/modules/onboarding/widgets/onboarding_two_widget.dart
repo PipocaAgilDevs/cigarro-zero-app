@@ -5,7 +5,12 @@ import '../../../design_system/onboarding/background.dart';
 import '../../../design_system/onboarding/text_themes.dart';
 
 class OnboardingTwoWidget extends StatelessWidget {
-  const OnboardingTwoWidget({super.key});
+  final VoidCallback onBackButtonPressed;
+
+  const OnboardingTwoWidget({
+    super.key,
+    required this.onBackButtonPressed,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +20,13 @@ class OnboardingTwoWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           const SizedBox(height: 30),
-          const Align(
+          Align(
             alignment: Alignment.centerLeft,
-            child: IOSBackButton(),
+            child: IOSBackButton(
+              onPressed: () {
+                onBackButtonPressed();
+              },
+            ),
           ),
           const SizedBox(height: 40),
           Text(
