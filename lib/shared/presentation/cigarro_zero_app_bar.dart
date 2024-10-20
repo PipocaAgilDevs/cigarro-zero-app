@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class HomeAppBar extends StatelessWidget {
-  const HomeAppBar({super.key});
+class CigarroZeroAppBar extends StatelessWidget {
+  final String subtitle;
+
+  const CigarroZeroAppBar({
+    super.key,
+    required this.subtitle,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -31,9 +36,9 @@ class HomeAppBar extends StatelessWidget {
                       textAlign: TextAlign.center,
                     ),
                     const SizedBox(height: 2),
-                    const Text(
-                      "Meu Progresso",
-                      style: TextStyle(
+                    Text(
+                      subtitle,
+                      style: const TextStyle(
                         color: Color(0xFF475467),
                         fontSize: 12,
                         fontWeight: FontWeight.w400,

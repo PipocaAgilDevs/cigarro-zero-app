@@ -49,10 +49,13 @@ final ThemeData appTheme = ThemeData(
     ).fontHeight(28.8),
     headlineSmall: const TextStyle(
       ///h6
-      fontSize: 21,
-      fontWeight: FontWeight.w700,
+      ///done
+      fontFamily: 'Oswald',
+      fontSize: 20,
+      fontWeight: FontWeight.w600,
+      color: AppColors.primary500,
       letterSpacing: -0.011,
-    ).fontHeight(31.5),
+    ).fontHeight(24),
     titleLarge: const TextStyle(
       ///done
       ///subtitle large

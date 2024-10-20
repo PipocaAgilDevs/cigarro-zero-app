@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 import '../../app_colors.dart';
+import '../../shared/presentation/cigarro_zero_app_bar.dart';
 import '../../theme_data.dart';
+import 'nav_bar.dart';
 import 'widgets/achievement_card.dart';
 import 'widgets/container_section.dart';
-import 'widgets/home_app_bar.dart';
-import 'widgets/navbar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -19,7 +19,9 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: theme.scaffoldBackgroundColor,
       appBar: const PreferredSize(
         preferredSize: Size(double.infinity, 70),
-        child: HomeAppBar(),
+        child: CigarroZeroAppBar(
+          subtitle: 'Meu Progresso',
+        ),
       ),
       bottomNavigationBar: const Navbar(),
       body: CustomScrollView(
