@@ -19,12 +19,14 @@ class HomeLocalDataSourceImpl implements HomeLocalDataSource {
     String? cigarrosMaco = await storage.read('cigarrosMaço');
     String? valorMaco = await storage.read('valorMaço');
 
-    if (name == null &&
-        hasStoppedSmoking == null &&
-        date == null &&
-        cigarrosDiarios == null &&
-        cigarrosMaco == null &&
-        valorMaco == null) {
+    if (_areAllValuesNull([
+      name,
+      hasStoppedSmoking,
+      date,
+      cigarrosDiarios,
+      cigarrosMaco,
+      valorMaco
+    ])) {
       return null;
     }
 
@@ -35,26 +37,12 @@ class HomeLocalDataSourceImpl implements HomeLocalDataSource {
     cigarrosMaco ??= '';
     valorMaco ??= '';
 
-    int daysWithoutSmoking = 0;
-    if (hasStoppedSmoking == 'SIM') {
-      try {
-        List<String> dateParts = date.split('/');
-        if (dateParts.length == 3) {
-          int day = int.parse(dateParts[0]);
-          int month = int.parse(dateParts[1]);
-          int year = int.parse(dateParts[2]);
-          DateTime stopDate = DateTime(year, month, day);
 
-          daysWithoutSmoking = DateTime.now().difference(stopDate).inDays;
-        }
-      } catch (e) {
-        print("Erro ao analisar a data: $e");
-      }
-    }
-
-    int avoidedCigarettes = daysWithoutSmoking * int.parse(cigarrosDiarios);
-    double moneySaved =
-        avoidedCigarettes * double.parse(valorMaco.replaceAll('R\$', ''));
+    int daysWithoutSmoking = _calculateDaysWithoutSmoking(
+        hasStoppedSmoking, date);
+    int avoidedCigarettes = _calculateAvoidedCigarettes(
+        daysWithoutSmoking, cigarrosDiarios);
+    double moneySaved = _calculateMoneySaved(avoidedCigarettes, valorMaco);
 
     return UserData(
       name: name,
@@ -62,5 +50,54 @@ class HomeLocalDataSourceImpl implements HomeLocalDataSource {
       avoidedCigarettes: avoidedCigarettes,
       moneySaved: moneySaved,
     );
+  }
+
+
+  bool _areAllValuesNull(List<String?> values) {
+    return values.every((value) => value == null);
+  }
+
+  int _calculateDaysWithoutSmoking(String hasStoppedSmoking, String date) {
+    if (hasStoppedSmoking == 'SIM') {
+      try {
+        DateTime? stopDate = _parseDate(date);
+        if (stopDate != null) {
+          return DateTime
+              .now()
+              .difference(stopDate)
+              .inDays;
+        }
+      } catch (e) {
+        print("Erro ao analisar a data: $e");
+      }
+    }
+    return 0;
+  }
+
+  DateTime? _parseDate(String date) {
+    try {
+      List<String> dateParts = date.split('/');
+      if (dateParts.length == 3) {
+        int day = int.parse(dateParts[0]);
+        int month = int.parse(dateParts[1]);
+        int year = int.parse(dateParts[2]);
+        return DateTime(year, month, day);
+      }
+    } catch (e) {
+      print("Erro ao fazer o parsing da data: $e");
+    }
+    return null;
+  }
+
+  int _calculateAvoidedCigarettes(int daysWithoutSmoking,
+      String cigarrosDiarios) {
+    int cigarrosDiariosInt = int.tryParse(cigarrosDiarios) ?? 0;
+    return daysWithoutSmoking * cigarrosDiariosInt;
+  }
+
+  double _calculateMoneySaved(int avoidedCigarettes, String valorMaco) {
+    double valorMacoDouble = double.tryParse(
+        valorMaco.replaceAll('R\$', '').replaceAll(',', '.')) ?? 0.0;
+    return avoidedCigarettes * valorMacoDouble;
   }
 }
