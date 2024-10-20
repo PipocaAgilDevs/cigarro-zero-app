@@ -14,10 +14,9 @@ class IOSBackButton extends StatelessWidget {
       onPressed: () {
         if (onPressed != null) {
           onPressed!();
-
-          return;
+        } else {
+          Navigator.of(context).pop();
         }
-        Navigator.of(context).pop();
       },
     );
   }
