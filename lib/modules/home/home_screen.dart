@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../app_colors.dart';
 import '../../shared/presentation/cigarro_zero_app_bar.dart';
+import '../../shared/presentation/nav_bar.dart';
 import '../../theme_data.dart';
-import 'nav_bar.dart';
 import 'widgets/achievement_card.dart';
 import 'widgets/container_section.dart';
 

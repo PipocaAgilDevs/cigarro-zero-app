@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../../app_colors.dart';
-import '../content/content_screen.dart';
-import 'home_screen.dart';
+import '../../modules/content/content_screen.dart';
+import '../../modules/home/home_screen.dart';
 
 class Navbar extends StatefulWidget {
   const Navbar({super.key});
